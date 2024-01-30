@@ -9,6 +9,8 @@ app.use(cors());
 // json parser
 app.use(express.json());
 
+app.use(express.urlencoded({ extended: false }));
+
 // middleware for template engine
 app.set('view engine', 'ejs');
 app.engine('ejs', require('ejs').__express);

@@ -24,7 +24,7 @@
         "editor.fontFamily": "Fira Code",
         "editor.fontSize": 18,
         "editor.fontLigatures": true,
-        "editor.defaultFormatter": "dprint.dprint",
+        // "editor.defaultFormatter": "dprint.dprint",
         "zenMode.fullScreen": false,
         "zenMode.centerLayout": false,
         "prettier.useEditorConfig": true,
@@ -165,12 +165,12 @@
       "[prisma]": {
           "editor.defaultFormatter": "Prisma.prisma"
       },
-      "[javascript]": {
-          "editor.defaultFormatter": "svipas.prettier-plus"
-      },
-      "[html]": {
-          "editor.defaultFormatter": "svipas.prettier-plus"
-      },
+    //   "[javascript]": {
+    //       "editor.defaultFormatter": "svipas.prettier-plus"
+    //   },
+    //   "[html]": {
+    //       "editor.defaultFormatter": "svipas.prettier-plus"
+    //   },
       "window.zoomLevel": -1
       }
       
