@@ -74,6 +74,12 @@
                 <div style="color: green;"><%-message%></div>
   
                 <% } %>
+
+                <% if(typeof (errorMessage) != "undefined") {%>
+
+                    <div style="color: red;"><%-errorMessage%></div>
+      
+                    <% } %>
               <!-- Email address input-->
               <div class="row input-group-newsletter">
                 <div class="col">
@@ -85,7 +91,15 @@
                     placeholder="Enter email address..."
                     aria-label="Enter email address..."
                     data-sb-validations="required,email"
+                    <% if(typeof (body) != "undefined") {%>
+                        value="<%=body.email%>"
+                    <% } %>
                   />
+                  <% if(typeof (errors) != "undefined") {%>
+
+                    <div style="color: red;"><%-errors.emailMsg%></div>
+  
+                    <% } %>
                 </div>
               </div>
 
@@ -100,6 +114,11 @@
                     placeholder="Enter password..."
                     aria-label="Enter password..."
                   />
+                  <% if(typeof (errors) != "undefined") {%>
+
+                    <div style="color: red;"><%-errors.passwordMsg%></div>
+  
+                    <% } %>
                 </div>
               </div>
 

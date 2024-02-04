@@ -2,7 +2,7 @@ const validationRegistration = (body) => {
   console.log('well this is the body', body);
   let errors = {};
 
-  const alphaBeticRegex = /^[A-Ba-z]+$/;
+  const alphaBeticRegex = /^[A-Za-z]+$/;
 
   if (body.firstName.length < 2 || !alphaBeticRegex.test(body.firstName)) {
     errors.firstNameMsg = 'First Name Required';
@@ -13,8 +13,7 @@ const validationRegistration = (body) => {
   }
 
   if (
-    body.address.length < 3 ||
-    !/^[\d{1,5}]\s\w(\b\w*\b\s){1,2}\w*\./.test(body.address)
+    body.address.length < 3
   ) {
     errors.addressMsg = 'Address Required';
   }
@@ -45,6 +44,22 @@ const validationRegistration = (body) => {
 
   return errors;
 };
+
+const validationLogin = (body) => {
+    let errors = {};
+    
+    if (!body.email) {
+        errors.emailMsg = 'Email Required';
+    }
+    
+    if (!body.password) {
+        errors.passwordMsg = 'Password Required';
+    }
+    
+    return errors;
+    };
+
 module.exports = {
   validationRegistration,
+    validationLogin,
 };

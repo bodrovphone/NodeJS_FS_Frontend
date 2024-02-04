@@ -93,7 +93,7 @@
           "tree.indentGuidesStroke": "#05ef3c"
         },
       
-        "editor.lightbulb.enabled": false,
+        "editor.lightbulb.enabled": "off",
         "workbench.editor.enablePreviewFromQuickOpen": false,
         "editor.gotoLocation.multipleImplementations": "goto",
         "editor.gotoLocation.multipleTypeDefinitions": "goto",
